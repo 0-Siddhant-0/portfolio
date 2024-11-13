@@ -52,7 +52,7 @@ const ContactSection = () => {
               Let's Connect!
             </span>
           </h2>
-          <p className="text-[22px] text-gray-300">Let's discuss opportunities and create something amazing together</p>
+          <p className="text-[22px] text-gray-300">Connect to discuss potential opportunities together</p>
         </div>
 
         {/* Contact Cards Grid */}

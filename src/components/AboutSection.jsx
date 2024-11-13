@@ -20,43 +20,43 @@ const AboutSection = () => {
         <h2 className="text-[32px] font-bold tracking-[0.2em] text-purple-400 mb-12"
             style={{ fontFamily: "'VT323', monospace" }}>
           About Me
-          <span className="block w-24 h-0.5 bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 mt-2"></span>
+          <span className="block w-24 h-0.5 bg-gradient-to-r from-purple-400 via-indigo-400 to-teal-400 mt-2"></span>
         </h2>
         
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="space-y-8">
             <p className="text-[22px] leading-relaxed animate-fadeIn" 
                style={{ fontFamily: "'VT323', monospace" }}>
-              I'm an <span className="text-cyan-400">Electrical and Computer Engineer</span> with expertise in 
-              embedded systems, signal processing, and machine learning—<span className="text-amber-400">a true tech polyglot</span>. 
+              I'm an <span className="text-teal-400">Electrical and Computer Engineer</span> with expertise in 
+              embedded systems, signal processing, and machine learning—<span className="text-teal-500">a true tech polyglot</span>. 
               I thrive on solving complex engineering challenges and developing efficient, practical solutions. My experience ranges 
-              from <span className="text-emerald-400">designing embedded systems</span> and 
-              <span className="text-pink-400"> implementing advanced signal processing algorithms</span> to 
-              <span className="text-blue-400"> applying machine learning techniques</span> and developing software solutions, 
+              from <span className="text-teal-400">designing embedded systems</span> and 
+              <span className="text-indigo-400"> implementing advanced signal processing algorithms</span> to 
+              <span className="text-sky-400"> applying machine learning techniques</span> and developing software solutions, 
               always aiming for robust and innovative outcomes that meet diverse engineering challenges.
             </p>
             
             <p className="text-[22px] leading-relaxed animate-fadeIn delay-200" 
                style={{ fontFamily: "'VT323', monospace" }}>
-              Having recently completed my <span className="text-fuchsia-400">master's degree at Binghamton University</span>, 
+              Having recently completed my <span className="text-indigo-500">master's degree at Binghamton University</span>, 
               I'm eager to apply my skills to real-world challenges. I believe in developing technology that not only solves 
               concrete problems but also opens doors to new possibilities. I'm particularly drawn to projects where I can combine 
               my hardware and software expertise to create <span className="text-teal-400">impactful solutions</span>.
             </p>
 
-            <div className="bg-black/20 p-6 rounded-lg border border-violet-400/20 
-                          backdrop-blur-sm hover:border-violet-400/30 transition-all duration-500
+            <div className="bg-black/20 p-6 rounded-lg border border-purple-400/20 
+                          backdrop-blur-sm hover:border-purple-400/30 transition-all duration-500
                           animate-fadeIn delay-300">
-              <h3 className="text-[22px] font-bold mb-4 text-violet-400" 
+              <h3 className="text-[22px] font-bold mb-4 text-teal-500" 
                   style={{ fontFamily: "'VT323', monospace" }}>
                 In my free time, I enjoy...
               </h3>
               <div className="grid grid-cols-2 gap-6">
                 {[
-                  { icon: Music, text: "Playing Guitar", color: "text-pink-400" },
-                  { icon: Film, text: "Shows/Movies", color: "text-blue-400" },
-                  { icon: Coffee, text: "Coffee Brewing", color: "text-amber-400" },
-                  { icon: Code, text: "Side Projects", color: "text-emerald-400" }
+                  { icon: Music, text: "Playing Guitar", color: "text-indigo-400" },
+                  { icon: Film, text: "Shows/Movies", color: "text-sky-400" },
+                  { icon: Coffee, text: "Coffee Brewing", color: "text-teal-500" },
+                  { icon: Code, text: "Side Projects", color: "text-teal-400" }
                 ].map((item, index) => (
                   <div key={index} 
                        className="flex items-center gap-3 hover:translate-x-1 transition-transform duration-300">
@@ -71,8 +71,8 @@ const AboutSection = () => {
               <button
                 onClick={downloadResume}
                 className="group flex items-center gap-2 px-6 py-2.5 
-                         border border-cyan-400 rounded-md text-cyan-400 text-[20px]
-                         hover:bg-cyan-400/10 transition-all duration-300"
+                         border border-teal-400 rounded-md text-teal-400 text-[20px]
+                         hover:bg-teal-400/10 transition-all duration-300"
                 style={{ fontFamily: "'VT323', monospace" }}
               >
                 <FileDown className="w-5 h-5" />
@@ -81,9 +81,9 @@ const AboutSection = () => {
               
               <div className="flex space-x-6 mt-4 sm:mt-0">
                 {[
-                  { icon: Mail, href: "mailto:schaurasia@binghamton.edu", color: "text-pink-400" },
+                  { icon: Mail, href: "mailto:schaurasia@binghamton.edu", color: "text-indigo-400" },
                   { icon: Github, href: "https://github.com/0-Siddhant-0", color: "text-purple-400" },
-                  { icon: Linkedin, href: "https://linkedin.com/in/siddchau27", color: "text-blue-400" }
+                  { icon: Linkedin, href: "https://linkedin.com/in/siddchau27", color: "text-sky-400" }
                 ].map((item, index) => (
                   <a
                     key={index}
@@ -129,7 +129,7 @@ const AboutSection = () => {
         .delay-500 { animation-delay: 500ms; }
 
         .border-gradient-to-r {
-          border-image: linear-gradient(to right, rgb(168, 85, 247), rgb(236, 72, 153), rgb(34, 211, 238)) 1;
+          border-image: linear-gradient(to right, rgb(168, 85, 247), rgb(99, 102, 241), rgb(34, 211, 238)) 1;
         }
       `}</style>
     </section>

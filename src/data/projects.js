@@ -54,7 +54,7 @@ const projects = [
     date: 'Aug 2022 - Oct 2022',
     association: 'Manipal University Jaipur',
     description: [
-      'Designed and implemented a real-time noise suppression algorithm using adaptive filtering (LMS) on an ESP32 microcontroller, reducing background noise in voice recordings by 10-15 dB.',
+      'Designed and implemented a real-time noise suppression algorithm using adaptive filtering (LMS) on an ESP32 microcontroller, reducing background noise in voice recordings by 8-10 dB.',
       'Validated performance through MATLAB simulations and real-time testing, demonstrating improved voice clarity.'
     ],
     skills: ['C++', 'MATLAB', 'DSP', 'Embedded']

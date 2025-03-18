@@ -1,4 +1,6 @@
 // data/projects.js
+import zekeImage from '../assets/zeke.png';
+
 const projects = [
   {
     title: 'FPGA-Based Matrix Multiplier for AI Acceleration',
@@ -8,7 +10,11 @@ const projects = [
       'Built and fine-tuned an 4x4 matrix multiplier on a Basys 3 FPGA for AI workloads, achieving real-time performance through UART-based input/output.',
       'Reduced computation latency and optimized FPGA resource usage, successfully synthesizing and simulating the design in Vivado.'
     ],
-    skills: ['Verilog', 'Xilinx Vivado', 'Embedded Systems']
+    skills: ['Verilog', 'Xilinx Vivado', 'Embedded Systems'],
+    githubLink: null, // Add link when available
+    diagramLink: null, // Add link when available
+    documentationLink: null, // Add link when available
+    imageAsset: null // Add imported image when available
   },
   {
     title: 'AI vs. Human Text Classifier (LLM Project)',
@@ -18,7 +24,11 @@ const projects = [
       'Built a transformer-based NLP model in PyTorch, achieving 95% accuracy in distinguishing AI-generated from human-written text.',
       'Enhanced performance by leveraging BERT tokenization and fine-tuning hyper-parameters through grid search.'
     ],
-    skills: ['Python', 'Kaggle', 'Transformer Models', 'Neural Networks', 'BERT']
+    skills: ['Python', 'Kaggle', 'Transformer Models', 'Neural Networks', 'BERT'],
+    githubLink: null,
+    diagramLink: null,
+    documentationLink: null,
+    imageAsset: null
   },
   {
     title: 'DFT Application in Jamming Signal Detection',
@@ -28,7 +38,11 @@ const projects = [
       'Developed and applied Discrete Fourier Transform(DFT) techniques to enhance signal detection in environments with jamming scenarios, where the signal is dominated by sinusoidal and white Gaussian noise.',
       'Used MATLAB to simulate jamming scenarios, implemented bandpass sampling to create the signal without aliasing, and performed DFT analysis to identify the true signal amidst the jamming, effectively increasing signal clarity and reducing the signal-to-noise ratio (SNR).'
     ],
-    skills: ['MATLAB', 'Bandpass Signal Sampling', 'DFT', 'Filter Design']
+    skills: ['MATLAB', 'Bandpass Signal Sampling', 'DFT', 'Filter Design'],
+    githubLink: null,
+    diagramLink: null,
+    documentationLink: null,
+    imageAsset: null
   },
   {
     title: 'Synergy Between Doppler Shift and Angle-of-Arrival(AoA) based emitter localization',
@@ -38,7 +52,11 @@ const projects = [
       'Formulated the signal model, derived the Cramer-Rao Lower Bound (CRLB), and simulated data for a scenario where an aircraft estimates the location of an emitter using a combination of Doppler Shift and Angle-of-Arrival (AoA) measurements.',
       'Created MATLAB simulations and implemented the Least Squares estimator, demonstrating the potential for improved accuracy in signal detection when using more than one measurement'
     ],
-    skills: ['Parameter Estimation', 'MATLAB', 'Digital Signal Processing', 'Statistical Signal Processing']
+    skills: ['Parameter Estimation', 'MATLAB', 'Digital Signal Processing', 'Statistical Signal Processing'],
+    githubLink: null,
+    diagramLink: null,
+    documentationLink: null,
+    imageAsset: null
   },
   {
     title: 'Image Complexity and Visual Aesthetics Analysis',
@@ -47,7 +65,11 @@ const projects = [
     description: [
       'Carried out an evaluation of image complexity and aesthetics on 1,500 images from the AVA dataset using information theory based on statistical measurements like entropy, mutual information, edges, etc., to determine the correlation between image complexity and aesthetics'
     ],
-    skills: ['Python', 'Information Theory', 'Data Analysis']
+    skills: ['Python', 'Information Theory', 'Data Analysis'],
+    githubLink: null,
+    diagramLink: null,
+    documentationLink: null,
+    imageAsset: null
   },
   {
     title: 'Real-Time DSP for Noise Suppression',
@@ -57,7 +79,11 @@ const projects = [
       'Designed and implemented a real-time noise suppression algorithm using adaptive filtering (LMS) on an ESP32 microcontroller, reducing background noise in voice recordings by 8-10 dB.',
       'Validated performance through MATLAB simulations and real-time testing, demonstrating improved voice clarity.'
     ],
-    skills: ['C++', 'MATLAB', 'DSP', 'Embedded']
+    skills: ['C++', 'MATLAB', 'DSP', 'Embedded'],
+    githubLink: null,
+    diagramLink: null,
+    documentationLink: null,
+    imageAsset: null
   },
   {
     title: 'Development of a Quadrupedal Robot: Zeke',
@@ -67,7 +93,11 @@ const projects = [
       'Developed a 12-servo quadrupedal robot (mini spot) using 3D printed parts, which is controlled by an ESP32 microcontroller.',
       'Programmed the robot to achieve stable movements and improved mobility through iterative testing and refinement'
     ],
-    skills: ['C++', '3D Printing', 'Arduino IDE', 'Soldering']
+    skills: ['C++', '3D Printing', 'Arduino IDE', 'Soldering'],
+    githubLink: 'https://github.com/0-Siddhant-0/esp32-robot-dog-code',
+    diagramLink: null, // You could add a diagram link here if available
+    documentationLink: null, // You could add documentation link here if available
+    imageAsset: zekeImage
   }
 ];
 

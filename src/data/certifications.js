@@ -16,6 +16,40 @@ const certifications = [
       'Mbed'
     ],
     certificateFile: '/assets/certificate.pdf'
+  },
+  {
+    title: 'Crash Course on Python',
+    issuer: 'Coursera',
+    date: 'November 2021',
+    credentialId: 'EJ5RU4P65BZ9',
+    logo: '/assets/clogo.jpeg',
+    skills: [
+      'Python',
+      'Programming Fundamentals',
+      'Object-Oriented Programming',
+      'Data Structures',
+      'Algorithms',
+      'Automation',
+      'Problem Solving'
+    ],
+    certificateFile: '/assets/Coursera EJ5RU4P65BZ9.pdf'
+  },
+  {
+    title: 'VLSI SoC Design using Verilog HDL',
+    issuer: 'Maven Silicon',
+    date: 'July 2021',
+    credentialId: 'MSUID : 062111739',
+    logo: '/assets/mslogo.jpeg',
+    skills: [
+      'VLSI Design',
+      'Verilog HDL',
+      'Digital Circuit Design',
+      'SoC Architecture',
+      'Hardware Description Language',
+      'RTL Design',
+      'FPGA'
+    ],
+    certificateFile: '/assets/VLSICourseCertificate.pdf'
   }
 ];
 

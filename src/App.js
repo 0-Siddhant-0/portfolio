@@ -40,15 +40,36 @@ function App() {
         </Suspense>
       </div>
       <style jsx global>{`
-        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-        * {
-          cursor: default;
-        }
-        ::selection {
-          background: #00ff00;
-          color: #000000;
-        }
-      `}</style>
+  @import url('https://fonts.googleapis.com/css2?family=VT323&family=Space+Mono:wght@400;700&family=Fira+Code:wght@400;500;600&display=swap');
+  
+  html {
+    font-size: 110%;
+  }
+  
+  * {
+    cursor: default;
+  }
+  
+  body {
+    font-family: 'Space Mono', 'Fira Code', monospace;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'VT323', monospace;
+    letter-spacing: 0.03em;
+  }
+  
+  /* For highest readability in body text */
+  p, li, span, div {
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+  }
+  
+  ::selection {
+    background: #00ff00;
+    color: #000000;
+  }
+`}</style>
     </div>
   );
 }

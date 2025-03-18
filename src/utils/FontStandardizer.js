@@ -1,15 +1,14 @@
 // utils/FontStandardizer.js
 import React from 'react';
 
-// Base font size standards (in pixels)
 const fontSizeStandards = {
-  h1: 48, // Main headers (was ~32px)
-  h2: 40, // Section headers (was ~28px)
-  h3: 32, // Sub-section headers (was ~24px)
-  h4: 28, // Card headers (was ~20px)
-  body: 20, // Regular text (was ~16px)
-  small: 16, // Small text (was ~14px)
-  tiny: 14  // Very small text (was ~12px)
+  h1: 56,    // Main headers (was 48px)
+  h2: 48,    // Section headers (was 40px)
+  h3: 40,    // Sub-section headers (was 32px)
+  h4: 34,    // Card headers (was 28px)
+  body: 26,  // Regular text (was 20px)
+  small: 22, // Small text (was 16px)
+  tiny: 18   // Very small text (was 14px)
 };
 
 // Font size classes mapping
@@ -36,7 +35,6 @@ const updateFontSizes = (className) => {
   if (!className) return '';
   
   return className.split(' ').map(cls => {
-    // If it's a font size class, replace it with our standardized version
     if (fontSizeClasses[cls]) {
       return fontSizeClasses[cls];
     }

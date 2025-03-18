@@ -2,8 +2,29 @@
 import React from 'react';
 import certifications from '../data/certifications';
 import { ExternalLink, Lock } from 'lucide-react';
+
 import armLogo from '../assets/arm.png';
-import certificatePdf from '../assets/certificate.pdf';
+import courseraCLogo from '../assets/clogo.jpeg';
+import mavenSiliconLogo from '../assets/mslogo.jpeg';
+
+import armCertificate from '../assets/certificate.pdf';
+import courseraCertificate from '../assets/Coursera EJ5RU4P65BZ9.pdf';
+import vlsiCertificate from '../assets/VLSICourseCertificate.pdf';
+
+
+const assetMap = {
+  '/assets/arm.png': armLogo,
+  '/assets/clogo.jpeg': courseraCLogo,
+  '/assets/mslogo.jpeg': mavenSiliconLogo,
+  '/assets/certificate.pdf': armCertificate,
+  '/assets/Coursera EJ5RU4P65BZ9.pdf': courseraCertificate,
+  '/assets/VLSICourseCertificate.pdf': vlsiCertificate
+};
+
+
+const getAsset = (path) => {
+  return assetMap[path] || path;
+};
 
 const CertificationCard = ({ cert }) => {
   return (
@@ -18,8 +39,8 @@ const CertificationCard = ({ cert }) => {
           <div className="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2
                          shadow-[0_0_15px_rgba(32,178,170,0.15)]">
             <img 
-              src={armLogo} 
-              alt="Arm Logo" 
+              src={getAsset(cert.logo)} 
+              alt={`${cert.issuer} Logo`} 
               className="w-full h-full object-contain"
             />
           </div>
@@ -70,14 +91,14 @@ const CertificationCard = ({ cert }) => {
       <div className="relative w-full md:w-96 bg-[#1a1a2e] border-l border-[#20B2AA]/20
                     group-hover:border-[#20B2AA]/40 transition-all duration-300">
         {/* PDF Preview */}
-        <div className="p-0"> {/* Removed padding for precise preview */}
+        <div className="p-0">
           <iframe
-            src={certificatePdf + '#toolbar=0&navpanes=0&scrollbar=0'}
+            src={getAsset(cert.certificateFile) + '#toolbar=0&navpanes=0&scrollbar=0'}
             title="Certificate"
-            className="w-full h-full" // Set width and height to 100% to fit container
+            className="w-full h-full"
             style={{
-              height: '300px', // Adjust this value to match certificate height exactly
-              pointerEvents: 'none' // Disables interaction with the PDF
+              height: '300px',
+              pointerEvents: 'none'
             }}
           />
         </div>
@@ -85,7 +106,7 @@ const CertificationCard = ({ cert }) => {
         {/* View Certificate Button */}
         <div className="mt-6 flex justify-center">
           <a
-            href={certificatePdf}
+            href={getAsset(cert.certificateFile)}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-4 py-2 

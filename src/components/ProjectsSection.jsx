@@ -58,6 +58,28 @@ const ResourceSection = ({ icon: Icon, title, link }) => {
   );
 };
 
+// New component to render multiple images in a row
+const ProjectGallery = ({ images, title }) => {
+  if (!images || images.length === 0) return null;
+  
+  return (
+    <div className="mt-4">
+      <div className="grid grid-cols-3 gap-4">
+        {images.map((image, idx) => (
+          <div key={idx} className="flex items-center justify-center">
+            <img 
+              src={image} 
+              alt={`${title} visualization ${idx + 1}`}
+              className="w-full h-auto max-h-80 object-contain rounded-lg border border-[#2ECC71]/30
+                         hover:border-[#2ECC71]/60 transition-all duration-300"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 const ProjectCard = ({ project }) => {
   const hasResources = project.githubLink || project.diagramLink || project.documentationLink;
   
@@ -96,8 +118,8 @@ const ProjectCard = ({ project }) => {
             )}
           </div>
 
-          {/* Project Image (if available) */}
-          {project.imageAsset && (
+          {/* Project Image (if available) - Handle single image */}
+          {project.imageAsset && !project.imageAssets && (
             <div className="mt-4">
               <img 
                 src={project.imageAsset} 
@@ -105,6 +127,11 @@ const ProjectCard = ({ project }) => {
                 className="w-full max-h-80 object-contain rounded-lg border border-[#2ECC71]/30"
               />
             </div>
+          )}
+          
+          {/* Project Images (if multiple available) */}
+          {project.imageAssets && project.imageAssets.length > 0 && (
+            <ProjectGallery images={project.imageAssets} title={project.title} />
           )}
 
           {/* Description */}

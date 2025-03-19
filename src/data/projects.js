@@ -1,5 +1,9 @@
 // data/projects.js
 import zekeImage from '../assets/zeke.png';
+// Import new project images
+import estimateProj3 from '../assets/estimate_proj/3.jpg';
+import estimateProj9 from '../assets/estimate_proj/9.jpg';
+import estimateProjComp from '../assets/estimate_proj/comp.png';
 
 const projects = [
   {
@@ -53,10 +57,12 @@ const projects = [
       'Created MATLAB simulations and implemented the Least Squares estimator, demonstrating the potential for improved accuracy in signal detection when using more than one measurement'
     ],
     skills: ['Parameter Estimation', 'MATLAB', 'Digital Signal Processing', 'Statistical Signal Processing'],
-    githubLink: null,
+    githubLink: 'https://github.com/0-Siddhant-0/Doppler-AoA-Emitter-Location',
     diagramLink: null,
     documentationLink: null,
-    imageAsset: null
+    imageAsset: null,
+    // Add the new images array property
+    imageAssets: [estimateProj3, estimateProjComp, estimateProj9]
   },
   {
     title: 'Image Complexity and Visual Aesthetics Analysis',

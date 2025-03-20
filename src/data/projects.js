@@ -1,9 +1,13 @@
 // data/projects.js
 import zekeImage from '../assets/zeke.png';
-// Import new project images
+//est
 import estimateProj3 from '../assets/estimate_proj/3.jpg';
 import estimateProj9 from '../assets/estimate_proj/9.jpg';
 import estimateProjComp from '../assets/estimate_proj/comp.png';
+//dsp
+import segAvgImg from '../assets/dsp/seg_avg.png';
+import trueJamSigImg from '../assets/dsp/true_and_jam_sig.png';
+import winWoImg from '../assets/dsp/win_wo.png';
 
 const projects = [
   {
@@ -15,10 +19,10 @@ const projects = [
       'Reduced computation latency and optimized FPGA resource usage, successfully synthesizing and simulating the design in Vivado.'
     ],
     skills: ['Verilog', 'Xilinx Vivado', 'Embedded Systems'],
-    githubLink: null, // Add link when available
-    diagramLink: null, // Add link when available
-    documentationLink: null, // Add link when available
-    imageAsset: null // Add imported image when available
+    githubLink: null, 
+    diagramLink: null, 
+    documentationLink: null, 
+    imageAsset: null 
   },
   {
     title: 'AI vs. Human Text Classifier (LLM Project)',
@@ -42,11 +46,12 @@ const projects = [
       'Developed and applied Discrete Fourier Transform(DFT) techniques to enhance signal detection in environments with jamming scenarios, where the signal is dominated by sinusoidal and white Gaussian noise.',
       'Used MATLAB to simulate jamming scenarios, implemented bandpass sampling to create the signal without aliasing, and performed DFT analysis to identify the true signal amidst the jamming, effectively increasing signal clarity and reducing the signal-to-noise ratio (SNR).'
     ],
-    skills: ['MATLAB', 'Bandpass Signal Sampling', 'DFT', 'Filter Design'],
-    githubLink: null,
+    skills: ['MATLAB', 'Digital Signal Processing', 'DFT', 'Spectral Analysis', 'Signal Detection', 'Windowing Techniques'],
+    githubLink: 'https://github.com/0-Siddhant-0/signal-jamming-detection/tree/main',
     diagramLink: null,
     documentationLink: null,
-    imageAsset: null
+    imageAsset: null,
+    imageAssets: [winWoImg, trueJamSigImg, segAvgImg]
   },
   {
     title: 'Synergy Between Doppler Shift and Angle-of-Arrival(AoA) based emitter localization',
@@ -61,7 +66,6 @@ const projects = [
     diagramLink: null,
     documentationLink: null,
     imageAsset: null,
-    // Add the new images array property
     imageAssets: [estimateProj3, estimateProjComp, estimateProj9]
   },
   {
@@ -101,9 +105,10 @@ const projects = [
     ],
     skills: ['C++', '3D Printing', 'Arduino IDE', 'Soldering'],
     githubLink: 'https://github.com/0-Siddhant-0/esp32-robot-dog-code',
-    diagramLink: null, // You could add a diagram link here if available
-    documentationLink: null, // You could add documentation link here if available
-    imageAsset: zekeImage
+    diagramLink: null, 
+    documentationLink: null, 
+    imageAsset: [zekeImage],
+    imageAssets: null
   }
 ];
 

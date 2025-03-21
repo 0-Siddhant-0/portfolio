@@ -128,10 +128,6 @@ const SkillsSection = () => {
               style={{ fontFamily: "'VT323', monospace" }}>
             Technical Skills
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-[20px] md:text-[22px]"
-             style={{ fontFamily: "'VT323', monospace" }}>
-            A comprehensive overview of my technical expertise in Electrical and Computer Engineering
-          </p>
         </div>
 
         {/* Skills Categories */}

@@ -8,6 +8,10 @@ import estimateProjComp from '../assets/estimate_proj/comp.png';
 import segAvgImg from '../assets/dsp/seg_avg.png';
 import trueJamSigImg from '../assets/dsp/true_and_jam_sig.png';
 import winWoImg from '../assets/dsp/win_wo.png';
+// NLP project assets
+import nlpArchitecture from '../assets/nlp/architecture.png';
+import nlpWordCloud from '../assets/nlp/word_cloud_from_dataset.png';
+import nlpTransformerFlow from '../assets/nlp/transformer_detection_flow.gif';
 
 const projects = [
   {
@@ -32,11 +36,12 @@ const projects = [
       'Built a transformer-based NLP model in PyTorch, achieving 95% accuracy in distinguishing AI-generated from human-written text.',
       'Enhanced performance by leveraging BERT tokenization and fine-tuning hyper-parameters through grid search.'
     ],
-    skills: ['Python', 'Kaggle', 'Transformer Models', 'Neural Networks', 'BERT'],
-    githubLink: null,
+    skills: ['Python', 'PyTorch', 'Transformer Models', 'NLP', 'BERT', 'Kaggle'],
+    githubLink: 'https://github.com/0-Siddhant-0/AI-vs-Human-text-classifier',
     diagramLink: null,
     documentationLink: null,
-    imageAsset: null
+    imageAsset: null,
+    imageAssets: [nlpTransformerFlow, nlpArchitecture, nlpWordCloud]
   },
   {
     title: 'DFT Application in Jamming Signal Detection',
@@ -107,7 +112,7 @@ const projects = [
     githubLink: 'https://github.com/0-Siddhant-0/esp32-robot-dog-code',
     diagramLink: null, 
     documentationLink: null, 
-    imageAsset: [zekeImage],
+    imageAsset: zekeImage,
     imageAssets: null
   }
 ];

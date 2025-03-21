@@ -58,20 +58,75 @@ const ResourceSection = ({ icon: Icon, title, link }) => {
   );
 };
 
-// New component to render multiple images in a row
+// Enhanced ProjectGallery component to handle GIFs better
 const ProjectGallery = ({ images, title }) => {
   if (!images || images.length === 0) return null;
   
+  // Check if any image is a GIF by looking at its import path
+  const hasGif = images.some(img => 
+    typeof img === 'string' ? img.includes('.gif') : img.toString().includes('.gif')
+  );
+  
+  // If a GIF is present, display it differently
+  if (hasGif) {
+    // Identify the GIF (assuming it's the first item if it exists)
+    const gifImage = images[0]; // For your NLP project, the GIF is first in the array
+    const staticImages = images.slice(1);
+    
+    return (
+      <div className="mt-4 space-y-6">
+        {/* GIF displayed prominently */}
+        <div className="flex justify-center">
+          <div className="w-full max-w-4xl">
+            <motion.img 
+              src={gifImage} 
+              alt={`${title} animation`}
+              className="w-full h-auto rounded-lg border border-[#2ECC71]/30
+                      hover:border-[#2ECC71]/60 transition-all duration-300
+                      shadow-lg"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            />
+          </div>
+        </div>
+        
+        {/* Static images in a grid */}
+        {staticImages.length > 0 && (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {staticImages.map((image, idx) => (
+              <div key={idx} className="flex flex-col items-center">
+                <motion.img 
+                  src={image} 
+                  alt={`${title} visualization ${idx + 1}`}
+                  className="w-full h-auto max-h-80 object-contain rounded-lg border border-[#2ECC71]/30
+                          hover:border-[#2ECC71]/60 transition-all duration-300
+                          shadow-md"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.1 * (idx + 1) }}
+                />
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    );
+  }
+  
+  // Original display for projects without GIFs
   return (
     <div className="mt-4">
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {images.map((image, idx) => (
           <div key={idx} className="flex items-center justify-center">
             <img 
               src={image} 
               alt={`${title} visualization ${idx + 1}`}
               className="w-full h-auto max-h-80 object-contain rounded-lg border border-[#2ECC71]/30
-                         hover:border-[#2ECC71]/60 transition-all duration-300"
+                       hover:border-[#2ECC71]/60 transition-all duration-300"
             />
           </div>
         ))}

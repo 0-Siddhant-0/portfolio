@@ -29,7 +29,7 @@ const projects = [
     imageAsset: null 
   },
   {
-    title: 'AI vs. Human Text Classifier (LLM Project)',
+    title: 'AI vs. Human Text Classifier (NLP Project)',
     date: 'Oct 2023 - Dec 2023',
     association: 'Thomas J. Watson College of Engineering and Applied Science, Binghamton University',
     description: [

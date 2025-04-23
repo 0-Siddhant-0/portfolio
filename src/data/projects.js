@@ -12,8 +12,36 @@ import winWoImg from '../assets/dsp/win_wo.png';
 import nlpArchitecture from '../assets/nlp/architecture.png';
 import nlpWordCloud from '../assets/nlp/word_cloud_from_dataset.png';
 import nlpTransformerFlow from '../assets/nlp/transformer_detection_flow.gif';
+// Diffusion project assets
+import diffModelImg from '../assets/diffusion_proj/diff_mod.png';
+import forwardProcessGif from '../assets/diffusion_proj/forward_process.gif';
+import finalComparisonImg from '../assets/diffusion_proj/final_comparison.png';
+import reverseProcessGif from '../assets/diffusion_proj/reverse_process_denoising.gif';
+// Combining forward and reverse process GIFs for side-by-side display
+import { createSideBySideGif } from '../utils/imageUtils';
 
 const projects = [
+  {
+    title: 'Generative Denoising for Medical Image Reconstruction',
+    date: 'March 2025 - April 2025',
+    association: 'Thomas J. Watson College of Engineering and Applied Science, Binghamton University',
+    description: [
+      'Developed and trained a conditional score-based diffusion model (VP-SDE with U-Net/Attention) in PyTorch to reconstruct clean medical CT patches from noisy inputs (σn = 0.3) using the OrganAMNIST dataset.',
+      'Achieved a +2.44 dB PSNR improvement by utilizing a combined loss function (MSE + frequency-domain L1), effectively removing noise while preserving anatomical details in the reconstructed images.'
+    ],
+    skills: ['Python', 'PyTorch', 'Diffusion Models', 'Image Processing', 'U-Net', 'Deep Learning', 'Medical Imaging'],
+    githubLink: 'https://github.com/0-Siddhant-0/generative-denoising-sde-diffusion',
+    diagramLink: null,
+    documentationLink: null,
+    imageAsset: null,
+    customLayout: createSideBySideGif(
+      forwardProcessGif, 
+      reverseProcessGif, 
+      diffModelImg, 
+      finalComparisonImg
+    ),
+    imageAssets: null
+  },
   {
     title: 'FPGA-Based Matrix Multiplier for AI Acceleration',
     date: 'Jun 2024 - Sep 2024',
@@ -29,7 +57,7 @@ const projects = [
     imageAsset: null 
   },
   {
-    title: 'AI vs. Human Text Classifier (NLP Project)',
+    title: 'AI vs. Human Text Classifier (LLM Project)',
     date: 'Oct 2023 - Dec 2023',
     association: 'Thomas J. Watson College of Engineering and Applied Science, Binghamton University',
     description: [

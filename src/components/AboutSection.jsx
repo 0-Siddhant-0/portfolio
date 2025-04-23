@@ -53,9 +53,9 @@ const AboutSection = () => {
               </h3>
               <div className="grid grid-cols-2 gap-6">
                 {[
-                  { icon: Music, text: "Playing Guitar", color: "text-indigo-400" },
+                  { icon: Music, text: "Music", color: "text-indigo-400" },
                   { icon: Film, text: "Shows/Movies", color: "text-sky-400" },
-                  { icon: Coffee, text: "Coffee Brewing", color: "text-teal-500" },
+                  { icon: Coffee, text: "Coffee", color: "text-teal-500" },
                   { icon: Code, text: "Side Projects", color: "text-teal-400" }
                 ].map((item, index) => (
                   <div key={index} 

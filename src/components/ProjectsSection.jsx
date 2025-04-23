@@ -58,6 +58,95 @@ const ResourceSection = ({ icon: Icon, title, link }) => {
   );
 };
 
+// Custom Layout component for diffusion project
+const CustomProjectLayout = ({ customLayout }) => {
+  if (!customLayout || customLayout.type !== 'custom-layout') return null;
+  
+  const { leftGif, rightGif, staticImage1, staticImage2 } = customLayout;
+  
+  return (
+    <div className="mt-4 space-y-6">
+      {/* Two GIFs side by side with equal height */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="overflow-hidden rounded-lg border border-[#2ECC71]/30 
+                      hover:border-[#2ECC71]/60 transition-all duration-300 shadow-lg flex flex-col">
+          <div className="flex-1 flex items-center justify-center p-4 bg-black/20" style={{ height: '400px' }}>
+            <motion.img 
+              src={leftGif} 
+              alt="Forward Process"
+              className="max-w-full max-h-full object-contain"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            />
+          </div>
+          <div className="bg-black/50 py-2 px-3 text-center text-[#2ECC71]">
+            Forward Process
+          </div>
+        </div>
+        
+        <div className="overflow-hidden rounded-lg border border-[#2ECC71]/30 
+                      hover:border-[#2ECC71]/60 transition-all duration-300 shadow-lg flex flex-col">
+          <div className="flex-1 flex items-center justify-center p-4 bg-black/20" style={{ height: '400px' }}>
+            <motion.img 
+              src={rightGif} 
+              alt="Reverse Process"
+              className="max-w-full max-h-full object-contain scale-150" /* Added scale-125 to make it 25% larger */
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            />
+          </div>
+          <div className="bg-black/50 py-2 px-3 text-center text-[#2ECC71]">
+            Reverse Process (Denoising)
+          </div>
+        </div>
+      </div>
+      
+      {/* Two static images side by side */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="overflow-hidden rounded-lg border border-[#2ECC71]/30 
+                      hover:border-[#2ECC71]/60 transition-all duration-300 shadow-lg flex flex-col">
+          <div className="flex-1 flex items-center justify-center p-4 bg-black/20" style={{ height: '350px' }}>
+            <motion.img 
+              src={staticImage1} 
+              alt="Diffusion Model"
+              className="max-w-full max-h-full object-contain"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            />
+          </div>
+          <div className="bg-black/50 py-2 px-3 text-center text-[#2ECC71]">
+            Diffusion model
+          </div>
+        </div>
+        
+        <div className="overflow-hidden rounded-lg border border-[#2ECC71]/30 
+                      hover:border-[#2ECC71]/60 transition-all duration-300 shadow-lg flex flex-col">
+          <div className="flex-1 flex items-center justify-center p-4 bg-black/20" style={{ height: '350px' }}>
+            <motion.img 
+              src={staticImage2} 
+              alt="Results Comparison"
+              className="max-w-full max-h-full object-contain"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            />
+          </div>
+          <div className="bg-black/50 py-2 px-3 text-center text-[#2ECC71]">
+            Results Comparison
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 // Enhanced ProjectGallery component to handle GIFs better
 const ProjectGallery = ({ images, title }) => {
   if (!images || images.length === 0) return null;
@@ -174,7 +263,7 @@ const ProjectCard = ({ project }) => {
           </div>
 
           {/* Project Image (if available) - Handle single image */}
-          {project.imageAsset && !project.imageAssets && (
+          {project.imageAsset && !project.imageAssets && !project.customLayout && (
             <div className="mt-4">
               <img 
                 src={project.imageAsset} 
@@ -185,8 +274,13 @@ const ProjectCard = ({ project }) => {
           )}
           
           {/* Project Images (if multiple available) */}
-          {project.imageAssets && project.imageAssets.length > 0 && (
+          {project.imageAssets && project.imageAssets.length > 0 && !project.customLayout && (
             <ProjectGallery images={project.imageAssets} title={project.title} />
+          )}
+          
+          {/* Custom Layout for specific projects */}
+          {project.customLayout && (
+            <CustomProjectLayout customLayout={project.customLayout} />
           )}
 
           {/* Description */}

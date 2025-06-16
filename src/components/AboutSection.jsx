@@ -81,7 +81,7 @@ const AboutSection = () => {
               
               <div className="flex space-x-6 mt-4 sm:mt-0">
                 {[
-                  { icon: Mail, href: "mailto:schaurasia@binghamton.edu", color: "text-indigo-400" },
+                  { icon: Mail, href: "mailto:siddchaurasia27@gmail.com", color: "text-indigo-400" },
                   { icon: Github, href: "https://github.com/0-Siddhant-0", color: "text-purple-400" },
                   { icon: Linkedin, href: "https://linkedin.com/in/siddchau27", color: "text-sky-400" }
                 ].map((item, index) => (

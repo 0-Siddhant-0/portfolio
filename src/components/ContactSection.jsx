@@ -7,9 +7,9 @@ const ContactSection = () => {
   const contactInfo = [
     {
       type: 'Email',
-      value: 'schaurasia@binghamton.edu',
+      value: 'siddchaurasia27@gmail.com',
       icon: Mail,
-      link: 'mailto:schaurasia@binghamton.edu',
+      link: 'mailto:siddchaurasia27@gmail.com',
       color: 'from-purple-500 to-pink-500'
     },
     {

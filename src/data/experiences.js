@@ -4,7 +4,7 @@ const experiences = [
     position: 'Research Assistant',
     company: 'Binghamton University',
     location: 'Binghamton, NY',
-    date: 'July 2024 - Present',
+    date: 'July 2024 - June 2025',
     tech: 'Python, ML, Image Processing, Security Testing',
     points: [
       'Engineered image byte manipulation techniques in Python that successfully bypassed C2PA\'s cryptographic checks.',

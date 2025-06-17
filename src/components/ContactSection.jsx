@@ -14,9 +14,9 @@ const ContactSection = () => {
     },
     {
       type: 'Phone',
-      value: '+1(607)2978221',
+      value: '+919106966006',
       icon: Phone,
-      link: 'tel:+16072978221',
+      link: 'tel:+919106966006',
       color: 'from-cyan-500 to-blue-500'
     },
     {

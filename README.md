@@ -4,4 +4,4 @@ Personal portfolio website showcasing my work as an Electrical and Computer Engi
 
 ## Contact
 
-Siddhant Chaurasia - schaurasia@binghamton.edu
+Siddhant Chaurasia - siddchaurasia27@gmail.com

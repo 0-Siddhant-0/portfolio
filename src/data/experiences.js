@@ -12,17 +12,6 @@ const experiences = [
     ]
   },
   {
-    position: 'Machine Learning Research Intern',
-    company: 'IOTA Informatics Pvt Ltd',
-    location: 'Bhopal, India',
-    date: 'May 2022 - Nov 2022',
-    tech: 'Python, PyTorch, Neural Network',
-    points: [
-      'Designed a CNN model using PyTorch to accurately recognize handwritten characters in doctors\' notes.',
-      'Increased recognition precision to 91% by applying OCR-specific preprocessing techniques and optimizing the model through cross-validation.'
-    ]
-  },
-  {
     position: 'Project Trainee',
     company: 'Indian Space Research Organization',
     location: 'Ahmedabad, India',
